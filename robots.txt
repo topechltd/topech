@@ -1,5 +1,32 @@
+# TOPECH — topechltd.com
+# Allow all search engine and AI crawlers (SEO + GEO)
+
 User-agent: *
 Allow: /
 
-# NOTE: Replace your-domain.com with your real domain before deployment
-Sitemap: https://your-domain.com/sitemap.xml
+# AI / generative engine crawlers (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://topechltd.com/sitemap.xml

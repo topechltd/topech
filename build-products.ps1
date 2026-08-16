@@ -8,6 +8,18 @@ $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $outDir = Join-Path $root "products"
 if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Null }
 $utf8 = New-Object System.Text.UTF8Encoding($false)
+$siteBase = "https://topechltd.com"
+
+# Escape a string for safe use inside HTML attributes
+function HtmlEsc($t) {
+  return ($t -replace '&', '&amp;') -replace '<', '&lt;' -replace '>', '&gt;'
+}
+# Normalize a string for safe embedding in JSON-LD (strip tags, decode entities)
+function JsonEsc($t) {
+  $s = $t -replace '<[^>]+>', ''
+  $s = $s -replace '&lt;', '<' -replace '&gt;', '>' -replace '&quot;', '"' -replace '&#39;', "'" -replace '&nbsp;', ' ' -replace '&amp;', '&'
+  return $s.Trim()
+}
 
 $whyBuy = @(
   @{ i = "🏭"; h = "Factory-Direct Supply"; p = "Buy straight from the manufacturer. Competitive wholesale pricing for distributors, labs and bulk orders — OEM labeling available." },
@@ -72,27 +84,82 @@ function Build-Page($d) {
 
 "@
   }
-  $faqHtml = @"
+  $faqItems = @(
+    @{ q = "What is the minimum order quantity (MOQ) for the $(JsonEsc $d.name)?"; a = "There is no strict MOQ — single-unit and sample orders are welcome. Distributors and OEM partners receive tiered wholesale pricing for bulk quantities." },
+    @{ q = "Does TOPECH support OEM / ODM customization?"; a = "Yes. As a manufacturer, TOPECH offers custom labeling, packaging, voltage configuration (110 V / 220 V) and interface customization for OEM and ODM projects." },
+    @{ q = "Can I get a sample or demo video before ordering?"; a = "Yes. Evaluation samples ship within 3–5 business days, and full operation videos of the $(JsonEsc $d.name) are available on request to help you verify performance." },
+    @{ q = "What is the lead time and how do you ship worldwide?"; a = "Standard lead time is 1–3 weeks. TOPECH ships globally via DHL, FedEx, UPS and air / sea freight with export packaging and full tracking." },
+    @{ q = "What warranty and technical support is included?"; a = "Every unit carries a 12-month warranty plus lifetime technical support — operation manuals, remote assistance and spare parts from our engineering team." }
+  )
+  $faqHtml = ""
+  foreach ($f in $faqItems) {
+    $faqHtml += @"
       <div class="faq-item">
-        <button class="faq-q">What is the minimum order quantity (MOQ) for the $($d.name)?</button>
-        <div class="faq-a"><div class="faq-a-inner">There is no strict MOQ — single-unit and sample orders are welcome. Distributors and OEM partners receive tiered wholesale pricing for bulk quantities.</div></div>
+        <button class="faq-q">$($f.q)</button>
+        <div class="faq-a"><div class="faq-a-inner">$($f.a)</div></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">Does TOPECH support OEM / ODM customization?</button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. As a manufacturer, TOPECH offers custom labeling, packaging, voltage configuration (110 V / 220 V) and interface customization for OEM and ODM projects.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Can I get a sample or demo video before ordering?</button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. Evaluation samples ship within 3–5 business days, and full operation videos of the $($d.name) are available on request to help you verify performance.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What is the lead time and how do you ship worldwide?</button>
-        <div class="faq-a"><div class="faq-a-inner">Standard lead time is 1–3 weeks. TOPECH ships globally via DHL, FedEx, UPS and air / sea freight with export packaging and full tracking.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What warranty and technical support is included?</button>
-        <div class="faq-a"><div class="faq-a-inner">Every unit carries a 12-month warranty plus lifetime technical support — operation manuals, remote assistance and spare parts from our engineering team.</div></div>
-      </div>
+
+"@
+  }
+
+  $pageUrl = "$siteBase/products/$($d.slug).html"
+  $ogImage = "$siteBase/images/products/$($d.imgs[0])"
+  $seoName = JsonEsc($d.name)
+  $seoDesc = JsonEsc($d.metaDesc)
+  $seoCatLabel = JsonEsc($d.catLabel)
+  $ogDesc = HtmlEsc($d.metaDesc)
+  $ldProduct = @"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "$seoName",
+  "image": ["$ogImage"],
+  "description": "$seoDesc",
+  "sku": "$($d.slug)",
+  "category": "$seoCatLabel",
+  "brand": { "@type": "Brand", "name": "TOPECH" },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Chongqing TOPECH Instrument Co., Limited",
+    "email": "sales@topechltd.com",
+    "telephone": "+86-177-8310-7268",
+    "url": "https://sccqtp.en.alibaba.com"
+  }
+}
+</script>
+"@
+  $ldBreadcrumb = @"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "$siteBase/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Products", "item": "$siteBase/products.html" },
+    { "@type": "ListItem", "position": 3, "name": "$seoCatLabel", "item": "$siteBase/products.html?cat=$($d.cat)" },
+    { "@type": "ListItem", "position": 4, "name": "$seoName" }
+  ]
+}
+</script>
+"@
+  $faqList = ""
+  $faqCount = 0
+  foreach ($f in $faqItems) {
+    if ($faqCount -gt 0) { $faqList += ",`r`n" }
+    $faqList += "      { `"@type`": `"Question`", `"name`": `"$($f.q)`", `"acceptedAnswer`": { `"@type`": `"Answer`", `"text`": `"$($f.a)`" } }"
+    $faqCount++
+  }
+  $ldFaq = @"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+$faqList
+  ]
+}
+</script>
 "@
 
   $html = @"
@@ -104,6 +171,20 @@ function Build-Page($d) {
 <title>$($d.seoTitle)</title>
 <meta name="description" content="$($d.metaDesc)">
 <meta name="keywords" content="$($d.keywords)">
+<link rel="canonical" href="$pageUrl">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="TOPECH Instrument">
+<meta property="og:title" content="$($d.seoTitle)">
+<meta property="og:description" content="$ogDesc">
+<meta property="og:url" content="$pageUrl">
+<meta property="og:image" content="$ogImage">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="$($d.seoTitle)">
+<meta name="twitter:description" content="$ogDesc">
+<meta name="twitter:image" content="$ogImage">
+$ldProduct
+$ldBreadcrumb
+$ldFaq
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="../images/favicon.png">
 </head>
