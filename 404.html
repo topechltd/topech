@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found - TOPECH</title>
+<meta name="robots" content="noindex">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 72px;
+    color: #0d3b66;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #0d3b66;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .btn:hover {
+    background: #1a5490;
+  }
+  .redirect-notice {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #856404;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="redirect-notice" id="redirectNotice" style="display:none;">
+    ⚡ Redirecting from old URL...
+  </div>
+  <h1>404</h1>
+  <h2>Page Not Found</h2>
+  <p>The page you're looking for has moved or no longer exists. TOPECH has migrated to a new website with improved product information and resources.</p>
+  <a href="/" class="btn">Go to Homepage</a>
+</div>
+
+<script>
+  // Smart redirect for old GoDaddy URLs
+  (function() {
+    const path = window.location.pathname;
+    const oldUrls = {
+      '/1.html': '/products/oil-friction-tester.html',
+      '/2.html': '/products/digital-anti-wear-tester.html',
+      '/3.html': '/products/high-temp-engine-oil-tester.html',
+      '/4.html': '/products/flash-point-tester.html',
+      '/5.html': '/products/kinematic-viscosity-tester-lyv8.html',
+      '/6.html': '/products/kinematic-viscosity-tester-ly445.html',
+      '/7.html': '/products/pour-point-tester.html',
+      '/8.html': '/products/oil-acidity-analyzer.html',
+      '/9.html': '/products/karl-fischer-water-content-tester.html',
+      '/10.html': '/products/petroleum-density-tester.html',
+      '/11.html': '/products/oil-color-chroma-tester.html',
+      '/12.html': '/products/copper-strip-corrosion-tester.html',
+      '/13.html': '/products/copper-strip-corrosion-bath-lpg.html',
+      '/14.html': '/products/nano-graphene-additive.html',
+      '/15.html': '/products/organic-fullerene-additive.html',
+      '/16.html': '/products/nano-anti-wear-additive.html',
+      '/17.html': '/products/metal-anti-wear-repair-agent.html',
+      '/18.html': '/products/boride-ep-drilling-lubricant.html',
+      '/19.html': '/products/engine-oil-system-cleaner.html',
+      '/products.html': '/products.html',
+      '/contact.html': '/contact.html',
+      '/about.html': '/index.html',
+      '/index.html': '/index.html'
+    };
+
+    // Check if current path matches an old URL
+    if (oldUrls[path]) {
+      const newPath = oldUrls[path];
+      document.getElementById('redirectNotice').style.display = 'block';
+      document.querySelector('.redirect-notice').textContent = '⚡ Redirecting from old URL to: ' + newPath;
+      
+      // Redirect after 1 second
+      setTimeout(function() {
+        window.location.href = newPath;
+      }, 1000);
+    }
+  })();
+</script>
+</body>
+</html>
