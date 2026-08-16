@@ -179,6 +179,7 @@ $faqHtml
     <h2>Looking for a Reliable Oil Testing Equipment Supplier?</h2>
     <p>TOPECH is a China-based manufacturer of petroleum testing instruments and lubricant additives, offering OEM/ODM services, wholesale pricing and global shipping. Contact us for quotations, samples and technical documentation.</p>
     <a href="../contact.html" class="btn btn-primary">Send Inquiry</a>
+    <a href="https://wa.me/8617783107268" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp: +86 177 8310 7268</a>
   </div>
 </div>
 
@@ -625,7 +626,7 @@ $products += ,@{
   sub = "Engine Oil · Wind Power Oil · Grease · Recommended Dosage 3%"
   desc = "The nano graphene additive is used in engine oil, wind power oil, mechanical oil, emulsion, drilling fluid and grease extreme-pressure lubricants. It has good oil solubility (I, II, III class base oils and PAO) with excellent dispersity, delivering anti-wear, anti-friction and anti-oxidation effects plus increased torque grade. Added to engine oil it also helps repairing, energy saving and relieving oil burning."
   tags = @("3% Dosage", "PAO Soluble", "Anti-Wear", "Anti-Oxidation")
-  imgs = @("nano-graphene-additive.jpg", "nano-graphene-additive-2.jpg", "nano-graphene-additive-3.jpg")
+  imgs = @("nano-graphene-additive-promo.jpg", "nano-graphene-additive.jpg", "nano-graphene-additive-2.jpg", "nano-graphene-additive-3.jpg")
   specs = [ordered]@{
     "Appearance" = "Brown green"
     "Viscosity 40 °C" = "33.5 mm²/s"

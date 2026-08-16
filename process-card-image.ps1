@@ -1,24 +1,23 @@
 ﻿# ============================================================
-# Process new five-digit display card image
+# Process nano-graphene additive promo as new gallery main image
 # Unified pipeline: 900x900 white canvas, HighQualityBicubic, JPEG q90
-# Output: images/products/digital-anti-wear-tester-card.jpg
+# Output: images/products/nano-graphene-additive-promo.jpg
 # ============================================================
 $ErrorActionPreference = "Stop"
 Add-Type -AssemblyName System.Drawing
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$srcPath = "C:\Users\33272\AppData\Roaming\QoderCN\SharedClientCache\cache\images\task-ef9\oil friction test machine2-faaa284f.jpg"
-$outPath = Join-Path $root "images\products\digital-anti-wear-tester-card.jpg"
+$srcPath = "C:\Users\33272\AppData\Roaming\QoderCN\SharedClientCache\cache\images\task-ef9\engine antifriction promo-47f1c88d.jpg"
+$outPath = Join-Path $root "images\products\nano-graphene-additive-promo.jpg"
 
 $bytes = [System.IO.File]::ReadAllBytes($srcPath)
 $ms = New-Object System.IO.MemoryStream(, $bytes)
 $img = [System.Drawing.Bitmap]::FromStream($ms)
 Write-Host "Source: $($img.Width)x$($img.Height)"
 
-$canvasSize = 900; $pad = 45
+$canvasSize = 900; $pad = 30
 $maxW = $canvasSize - 2 * $pad; $maxH = $canvasSize - 2 * $pad
 $scale = [Math]::Min($maxW / $img.Width, $maxH / $img.Height)
-if ($scale -gt 1) { $scale = 1 }
 $drawW = [int]([Math]::Round($img.Width * $scale))
 $drawH = [int]([Math]::Round($img.Height * $scale))
 

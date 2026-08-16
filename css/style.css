@@ -399,6 +399,7 @@ ul { list-style: none; }
 }
 .cta-banner h2 { font-size: 28px; margin-bottom: 10px; }
 .cta-banner p { color: #cfe0ef; max-width: 640px; margin: 0 auto 26px; }
+.cta-banner .btn { margin: 0 8px 10px; }
 
 /* ---------- Resources ---------- */
 .resource-list { display: grid; gap: 22px; }
