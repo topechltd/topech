@@ -13,9 +13,9 @@ $srcDir = "C:\Users\33272\AppData\Roaming\QoderCN\SharedClientCache\cache\images
 $outDir = Join-Path $root "images\products"
 
 $files = @(
-  @{ s = "fullerene anti wear additive-c032b14a.jpg";  d = "organic-fullerene-additive.jpg" },
-  @{ s = "fullerene anti wear additive2-038fdd06.jpg"; d = "organic-fullerene-additive-2.jpg" },
-  @{ s = "fullerene anti wear additive3-792c413f.jpg"; d = "organic-fullerene-additive-3.jpg" }
+  @{ s = "organic-fullerene-additive-15ab54e1.jpg";   d = "organic-fullerene-additive.jpg" },
+  @{ s = "organic-fullerene-additive-2-73d721b3.jpg"; d = "organic-fullerene-additive-2.jpg" },
+  @{ s = "organic-fullerene-additive-3-53fc4afa.jpg"; d = "organic-fullerene-additive-3.jpg" }
 )
 
 foreach ($f in $files) {
