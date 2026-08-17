@@ -91,6 +91,8 @@ function Build-Page($d) {
     @{ q = "What is the lead time and how do you ship worldwide?"; a = "Standard lead time is 1–3 weeks. TOPECH ships globally via DHL, FedEx, UPS and air / sea freight with export packaging and full tracking." },
     @{ q = "What warranty and technical support is included?"; a = "Every unit carries a 12-month warranty plus lifetime technical support — operation manuals, remote assistance and spare parts from our engineering team." }
   )
+  # Append product-specific extra FAQ if defined
+  if ($d.extraFaq) { $faqItems += $d.extraFaq }
   $faqHtml = ""
   foreach ($f in $faqItems) {
     $faqHtml += @"
@@ -311,21 +313,29 @@ $products = @()
 
 $products += ,@{
   slug = "oil-friction-tester"; cat = "friction"; catLabel = "Oil Friction Testers"
-  name = "Portable Oil Friction Tester"
-  seoTitle = "Portable Oil Friction Tester, Oil Abrasion Lubricity Tester | TOPECH"
-  metaDesc = "TOPECH portable oil friction tester demonstrates lubricant anti-wear performance: ordinary oil locks at 3-4 weights, anti-friction oil runs past 12 weights."
-  keywords = "oil friction tester,lubricity tester,oil abrasion tester,oil wear test equipment,anti friction tester"
-  sub = "Lubricity / Oil Abrasion Demo Machine · 12 Weights · 220 V"
-  desc = "The portable oil friction tester is used for testing the anti-friction and anti-wear performance of lubricating oils and additives. Under 220 V test conditions, ordinary oil locks the machine with 3–4 weights, while anti-friction oil allows more than 12 weights without locking — a dramatic, visual demonstration of lubricant quality. Standard packing includes the machine body, 12 weights, 2 iron oil cups, 2 oil stones, power cable, 30 steel balls, a spare abrasive wheel and a portable air case."
-  tags = @("12 Weights", "220 V", "Portable Case", "30 Steel Balls", "Demo Video")
+  name = "Timken Oil Friction Tester, Portable Lubricity Tester"
+  seoTitle = "Timken Oil Friction Tester, Portable Lubricity Tester | ASTM D2782 | TOPECH"
+  metaDesc = "TOPECH Timken oil friction tester (ASTM D2782) demonstrates lubricant anti-wear performance. OK load test: ordinary oil locks at 3-4 weights, anti-wear oil runs past 12 weights."
+  keywords = "Timken tester,Timken machine,Timken oil friction tester,Timken OK load tester,lubricity tester,oil abrasion tester,anti wear tester,four ball tester,block on ring tester,ASTM D2782,ASTM D2509,extreme pressure tester"
+  sub = "Timken OK Load Test · Lubricity Demo Machine · 12 Weights · 220 V"
+  desc = "The TOPECH Timken oil friction tester (also called Timken machine or lubricity tester) evaluates lubricant anti-wear and extreme pressure performance using the Timken OK load method per ASTM D2782 and ASTM D2509. Under 220 V test conditions, ordinary oil locks the machine at 3-4 weights (OK value), while anti-wear oil allows more than 12 weights without lock-up — a dramatic, visual demonstration of lubricant quality. This portable block-on-ring tester is ideal for lubricant distributors, additive manufacturers and quality control labs. Standard packing includes the machine body, 12 weights, 2 iron oil cups, 2 oil stones, power cable, 30 steel balls, a spare abrasive wheel and a portable aluminum case."
+  tags = @("Timken OK Load", "ASTM D2782", "12 Weights", "220 V", "Portable Case", "Demo Video")
+  extraFaq = @(
+    @{ q = "What is the Timken OK load test method?"; a = "The Timken OK load test (ASTM D2782 / ASTM D2509) measures the maximum load a lubricant can support before the oil film ruptures. A rotating ring presses against a fixed steel block under increasing weight. The highest load without scoring or lock-up is the OK value — higher OK values indicate superior anti-wear and extreme pressure performance." },
+    @{ q = "Is this a Timken machine or a four ball tester?"; a = "This is a Timken-type block-on-ring tester, not a four ball machine. The Timken method uses a rotating ring against a fixed block (line contact), while four ball testers use four steel balls in point contact. Both are valid for evaluating lubricant anti-wear performance, but Timken testers are preferred for demonstration and quality screening." },
+    @{ q = "What standards does this Timken tester comply with?"; a = "The TOPECH Timken tester is designed according to ASTM D2782 (extreme pressure properties of lubricating fluids) and ASTM D2509 (load-carrying capacity of lubricating greases). It is also compatible with Chinese standards GB/T 11144 and SH/T 0203." },
+    @{ q = "Can I use this Timken tester for both engine oil and gear oil?"; a = "Yes. The Timken tester works with engine oils, gear oils, hydraulic oils, lubricating greases and cutting fluids. The visual lock-up comparison makes it ideal for quality control and customer demonstrations across all lubricant types." }
+  )
   imgs = @("oil-friction-tester.jpg", "oil-friction-tester-front.jpg", "oil-friction-tester-panel.jpg", "oil-friction-tester-weights.jpg", "oil-friction-tester-case.jpg", "oil-friction-tester-case-2.jpg", "oil-friction-tester-case-3.jpg")
-    videos = @( @{ src = "anti-wear-test.mp4"; poster = "oil-friction-tester-panel.jpg"; note = "Watch the Portable Oil Friction Tester running a real anti-wear test — live friction readings, weight loading and wear comparison in one demonstration." } )
+    videos = @( @{ src = "anti-wear-test.mp4"; poster = "oil-friction-tester-panel.jpg"; note = "Watch the Timken Oil Friction Tester running a real anti-wear test — live friction readings, weight loading and wear comparison in one demonstration." } )
   specs = [ordered]@{
-    "Model" = "Portable Oil Friction Tester (Lubricity Tester)"
+    "Model" = "Timken Oil Friction Tester (Lubricity Tester)"
+    "Test Method" = "Timken OK Load Method (ASTM D2782 / ASTM D2509)"
     "Test Voltage" = "AC 220 V"
     "Weights" = "12 pcs, each ≈ 100 kg load on the friction pair"
-    "Ordinary Oil Lock-Up" = "3–4 weights"
-    "Anti-Friction Oil" = "More than 12 weights without lock-up"
+    "OK Value (Ordinary Oil)" = "3–4 weights lock-up"
+    "OK Value (Anti-Wear Oil)" = "More than 12 weights without lock-up"
+    "Friction Type" = "Block-on-Ring (ring rotates against fixed block)"
     "Oil Cup" = "Iron oil cup × 2 (never leak, never deform)"
     "Steel Balls" = "30 pcs standard"
     "Accessories" = "2 oil stones, spare abrasive wheel, power cable"
@@ -341,20 +351,20 @@ $products += ,@{
 
 $products += ,@{
   slug = "digital-anti-wear-tester"; cat = "friction"; catLabel = "Oil Friction Testers"
-  name = "Anti-Wear Tester with Five-Digit Display"
-  seoTitle = "New Anti-Wear Tester with Five-Digit Display | TOPECH"
-  metaDesc = "TOPECH anti-wear tester with five digital displays shows voltage, current, instantaneous power, power consumption and oil temperature during friction tests."
-  keywords = "anti wear tester,oil friction tester with display,power consumption tester,oil temperature tester"
-  sub = "Displays V · A · W · kWh · Oil Temperature in Real Time"
-  desc = "The new generation anti-wear tester adds five digital displays showing voltage (V), current (A), instantaneous power (W), power consumption (kWh) and instantaneous oil temperature (T). Run two machines side by side for a strictly fair comparison: place the same weights, run 3–5 minutes, and observe current, power and temperature differences. Lower oil temperature means better viscosity stability; lower power consumption means better fuel economy; stable color and no smoke indicate superior lubricant quality."
+  name = "Digital Anti-Wear Tester with Timken OK Load Display"
+  seoTitle = "Digital Anti-Wear Tester with Five Displays | Timken Machine | TOPECH"
+  metaDesc = "TOPECH digital anti-wear tester with five displays shows voltage, current, power, energy and oil temperature during Timken OK load friction tests."
+  keywords = "digital anti wear tester,Timken machine with display,Timken tester five display,oil friction tester digital,anti wear test machine,power consumption tester"
+  sub = "Timken Test with V · A · W · kWh · Oil Temperature Displays"
+  desc = "The new generation digital anti-wear tester (Timken machine) adds five digital displays showing voltage (V), current (A), instantaneous power (W), power consumption (kWh) and instantaneous oil temperature (T). Run two Timken machines side by side for a strictly fair comparison: place the same weights, run 3–5 minutes, and observe current, power and temperature differences. Lower oil temperature means better viscosity stability; lower power consumption means better fuel economy; stable color and no smoke indicate superior lubricant quality."
   tags = @("5 Digital Displays", "Side-by-Side Comparison", "Real-Time Temperature", "220 V")
   imgs = @("digital-anti-wear-tester-silver.jpg", "digital-anti-wear-tester-angle.jpg", "digital-anti-wear-tester-display.jpg", "digital-anti-wear-tester-grey.jpg", "digital-anti-wear-tester.jpg", "digital-anti-wear-tester-set.jpg", "digital-anti-wear-tester-unit.jpg", "digital-anti-wear-tester-panel.jpg")
     videos = @(
-        @{ src = "anti-wear-test.mp4"; poster = "digital-anti-wear-tester-silver.jpg"; note = "Watch the Anti-Wear Tester with Five-Digit Display running a real anti-wear test — live V / A / W readings, weight loading and wear comparison in one demonstration." },
-        @{ src = "anti-water-test.mp4"; poster = "digital-anti-wear-tester-display.jpg"; note = "Anti-water test demonstration on the Anti-Wear Tester with Five-Digit Display — real-time performance under water exposure." }
+        @{ src = "anti-wear-test.mp4"; poster = "digital-anti-wear-tester-silver.jpg"; note = "Watch the Digital Anti-Wear Tester (Timken Machine) running a real anti-wear test — live V / A / W readings, weight loading and wear comparison in one demonstration." },
+        @{ src = "anti-water-test.mp4"; poster = "digital-anti-wear-tester-display.jpg"; note = "Anti-water test demonstration on the Digital Anti-Wear Tester (Timken Machine) — real-time performance under water exposure." }
       )
   specs = [ordered]@{
-    "Model" = "Anti-Wear Tester with Five-Digit Display"
+    "Model" = "Digital Anti-Wear Tester with Timken OK Load Display"
     "Display Items" = "Voltage (V), Current (A), Power (W), Consumption (kWh), Oil temperature (T)"
     "Test Voltage" = "AC 220 V"
     "Comparison Mode" = "Two machines side by side, simultaneous start"
