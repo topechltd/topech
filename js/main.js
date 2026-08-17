@@ -80,8 +80,20 @@ document.addEventListener('DOMContentLoaded', function () {
         'Message:\n' + get('f-message')
       );
       location.href = 'mailto:sales@topechltd.com?subject=' + subject + '&body=' + body;
+      /* Facebook Pixel: Lead conversion (form inquiry) */
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { content_name: get('f-product') || 'General Inquiry' });
+      }
     });
   }
+
+  /* Facebook Pixel: Contact conversion (WhatsApp clicks, all pages) */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+    if (link && typeof fbq === 'function') {
+      fbq('track', 'Contact');
+    }
+  });
 
   /* Footer year */
   var year = document.querySelector('#year');
