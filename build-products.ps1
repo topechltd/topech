@@ -62,7 +62,7 @@ function Build-Page($d) {
     foreach ($v in $d.videos) {
       $videoHtml += @"
     <div class="video-wrap">
-      <video controls preload="metadata" poster="../images/products/$($v.poster)">
+      <video controls preload="metadata" title="$($v.note)" poster="../images/products/$($v.poster)">
         <source src="../videos/$($v.src)" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -164,6 +164,28 @@ $faqList
 </script>
 "@
 
+  # VideoObject structured data (video rich results + AI search citation)
+  $ldVideo = ""
+  if ($d.videos) {
+    $vidList = ""
+    $vidCount = 0
+    foreach ($v in $d.videos) {
+      if ($vidCount -gt 0) { $vidList += ",`r`n" }
+      $vidList += "    { `"@type`": `"VideoObject`", `"name`": `"$(JsonEsc $v.note)`", `"description`": `"$(JsonEsc $v.note)`", `"thumbnailUrl`": `"$siteBase/images/products/$($v.poster)`", `"contentUrl`": `"$siteBase/videos/$($v.src)`", `"uploadDate`": `"2026-08-17`" }"
+      $vidCount++
+    }
+    $ldVideo = @"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+$vidList
+  ]
+}
+</script>
+"@
+  }
+
   $html = @"
 <!DOCTYPE html>
 <html lang="en">
@@ -187,6 +209,7 @@ $faqList
 $ldProduct
 $ldBreadcrumb
 $ldFaq
+$ldVideo
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" href="../images/favicon.png">
 </head>
@@ -327,7 +350,7 @@ $products += ,@{
     @{ q = "Can I use this Timken tester for both engine oil and gear oil?"; a = "Yes. The Timken tester works with engine oils, gear oils, hydraulic oils, lubricating greases and cutting fluids. The visual lock-up comparison makes it ideal for quality control and customer demonstrations across all lubricant types." }
   )
   imgs = @("oil-friction-tester.jpg", "oil-friction-tester-front.jpg", "oil-friction-tester-panel.jpg", "oil-friction-tester-weights.jpg", "oil-friction-tester-case.jpg", "oil-friction-tester-case-2.jpg", "oil-friction-tester-case-3.jpg")
-    videos = @( @{ src = "anti-wear-test.mp4"; poster = "oil-friction-tester-panel.jpg"; note = "Watch the Timken Oil Friction Tester running a real anti-wear test — live friction readings, weight loading and wear comparison in one demonstration." } )
+    videos = @( @{ src = "timken-bearing-anti-wear-test-full.mp4"; poster = "oil-friction-tester-panel.jpg"; note = "Timken Bearing Anti-Wear Test — real-world demonstration on the TOPECH Timken Oil Friction Tester: high load capacity, minimal wear, stable rotation and long service life." } )
   specs = [ordered]@{
     "Model" = "Timken Oil Friction Tester (Lubricity Tester)"
     "Test Method" = "Timken OK Load Method (ASTM D2782 / ASTM D2509)"
@@ -360,8 +383,8 @@ $products += ,@{
   tags = @("5 Digital Displays", "Side-by-Side Comparison", "Real-Time Temperature", "220 V")
   imgs = @("digital-anti-wear-tester-silver.jpg", "digital-anti-wear-tester-angle.jpg", "digital-anti-wear-tester-display.jpg", "digital-anti-wear-tester-grey.jpg", "digital-anti-wear-tester.jpg", "digital-anti-wear-tester-set.jpg", "digital-anti-wear-tester-unit.jpg", "digital-anti-wear-tester-panel.jpg")
     videos = @(
-        @{ src = "anti-wear-test.mp4"; poster = "digital-anti-wear-tester-silver.jpg"; note = "Watch the Digital Anti-Wear Tester (Timken Machine) running a real anti-wear test — live V / A / W readings, weight loading and wear comparison in one demonstration." },
-        @{ src = "anti-water-test.mp4"; poster = "digital-anti-wear-tester-display.jpg"; note = "Anti-water test demonstration on the Digital Anti-Wear Tester (Timken Machine) — real-time performance under water exposure." }
+        @{ src = "timken-bearing-anti-wear-test-full.mp4"; poster = "digital-anti-wear-tester-silver.jpg"; note = "Timken Bearing Anti-Wear Test — live demonstration on the Digital Anti-Wear Tester with real-time V / A / W readings under high load conditions." },
+        @{ src = "timken-bearing-water-resistance-test-full.mp4"; poster = "digital-anti-wear-tester-display.jpg"; note = "Timken Bearing Water Resistance Test — bearing exposed to water spray while running, proving anti-rust sealing and waterproof protection for harsh environments." }
       )
   specs = [ordered]@{
     "Model" = "Digital Anti-Wear Tester with Timken OK Load Display"
