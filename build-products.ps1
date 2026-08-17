@@ -449,6 +449,232 @@ $products += ,@{
 }
 
 $products += ,@{
+  slug = "timken-test-machine"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Timken Test Machine for Anti-Wear Oil Testing"
+  seoTitle = "Timken Test Machine for Anti-Wear Oil Testing | ASTM D2782 | TOPECH"
+  metaDesc = "TOPECH Timken test machine evaluates lubricant anti-wear performance by the Timken OK load method. Ordinary oil locks at 3-4 weights, anti-wear oil passes more than 12 weights."
+  keywords = "Timken test machine,Timken testing machine,Timken machine,anti wear test machine,Timken OK load machine,ASTM D2782 machine,Timken tester price"
+  sub = "Timken OK Load Method · ASTM D2782 / ASTM D2509 · Lever Loading · 220 V"
+  desc = "The TOPECH Timken test machine (Timken testing machine) evaluates the anti-wear and extreme pressure performance of lubricating oils and greases using the Timken OK load method per ASTM D2782 and ASTM D2509. A rotating ring presses against a fixed steel block under lever-applied weights: ordinary oil locks the machine at 3–4 weights, while anti-wear oil keeps running past 12 weights — an instant, visual verdict on lubricant quality. The industrial green housing, torque loading lever, analog ammeter and dedicated drive motor make it a durable workhorse for lubricant companies, additive distributors and QC labs."
+  tags = @("Timken OK Load", "ASTM D2782", "12 Weights", "220 V", "Block-on-Ring")
+  imgs = @("timken-tester-green-front.jpg")
+  videos = @( @{ src = "timken-bearing-anti-wear-test-full.mp4"; poster = "timken-tester-green-front.jpg"; note = "Timken Bearing Anti-Wear Test — real-world demonstration on the TOPECH Timken Test Machine: high load capacity, minimal wear and stable rotation." } )
+  specs = [ordered]@{
+    "Model" = "Timken Test Machine (Anti-Wear Oil Testing)"
+    "Test Method" = "Timken OK Load Method (ASTM D2782 / ASTM D2509)"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Loading" = "Lever system with graded weights"
+    "OK Value (Ordinary Oil)" = "3–4 weights lock-up"
+    "OK Value (Anti-Wear Oil)" = "More than 12 weights without lock-up"
+    "Friction Type" = "Block-on-Ring (ring rotates against fixed block)"
+    "Indication" = "Analog ammeter for load / current observation"
+    "Housing" = "Industrial metal cabinet, green finish"
+  }
+  apps = @(
+    @{ h = "Lubricant Brand Demonstration"; p = "Show customers the lock-up difference between ordinary and anti-wear oils in minutes." },
+    @{ h = "Additive Distributor Sales"; p = "Portable proof of additive effect at exhibitions, workshops and customer visits." },
+    @{ h = "Incoming Oil QC"; p = "Fast comparative screening of lubricant batches against a reference oil." },
+    @{ h = "Training &amp; Education"; p = "Hands-on teaching of boundary lubrication and OK load concepts." }
+  )
+}
+
+$products += ,@{
+  slug = "timken-ok-load-tester"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Timken OK Load Tester with Dual Digital Display"
+  seoTitle = "Timken OK Load Tester, ASTM D2782 Lubricant Tester | TOPECH"
+  metaDesc = "TOPECH Timken OK load tester to ASTM D2782 / D2509 measures lubricant load-carrying capacity with dual digital display and stainless steel construction."
+  keywords = "Timken OK load tester,OK load test,ASTM D2782 tester,ASTM D2509 tester,lubricant load carrying capacity tester,Timken tester dual display"
+  sub = "ASTM D2782 / ASTM D2509 · Dual Digital Display · Stainless Steel Body"
+  desc = "The Timken OK load tester determines the maximum load (OK value) a lubricant can carry before the oil film ruptures, per ASTM D2782 for lubricating fluids and ASTM D2509 for lubricating greases. The polished stainless steel body resists oil and corrosion, while the dual digital displays keep test parameters clearly visible during loading. Weights are applied step by step through the long lever until scoring or lock-up occurs — the last passed load is the OK value, and higher is better."
+  tags = @("Timken OK Load", "Dual Digital Display", "Stainless Steel", "ASTM D2509")
+  imgs = @("timken-tester-silver-angle.jpg")
+  specs = [ordered]@{
+    "Model" = "Timken OK Load Tester (Dual Display)"
+    "Test Method" = "Timken OK Load (ASTM D2782 / ASTM D2509)"
+    "Display" = "Dual digital LED displays for test parameters"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Loading" = "Step weights on long lever arm"
+    "Friction Type" = "Block-on-Ring (ring rotates against fixed block)"
+    "Body" = "Brushed stainless steel cabinet"
+    "Result" = "OK load value — highest weight passed without scoring"
+  }
+  apps = @(
+    @{ h = "Lubricant Quality Ranking"; p = "Rank oils by OK load value — a single number customers understand." },
+    @{ h = "Grease EP Verification"; p = "Load-carrying capacity checks of lubricating greases per ASTM D2509." },
+    @{ h = "Additive Effect Proof"; p = "Show OK value improvement before and after additive dosing." },
+    @{ h = "Technical Demonstrations"; p = "Clear, repeatable film-rupture demos for sales and training." }
+  )
+}
+
+$products += ,@{
+  slug = "timken-bearing-tester"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Timken Bearing Wear Tester for Lubricating Oil"
+  seoTitle = "Timken Bearing Wear Tester for Lubricating Oil | TOPECH"
+  metaDesc = "Timken bearing wear tester runs bearings against loaded blocks to demonstrate lubricant anti-wear protection for engines, gearboxes and motors."
+  keywords = "Timken bearing tester,bearing wear tester,bearing anti wear test machine,oil bearing tester,lubricant bearing protection tester"
+  sub = "Bearing-Level Anti-Wear Demonstration · Lever Loading · 220 V"
+  desc = "The Timken bearing wear tester reproduces the boundary friction that real bearings suffer. A rotating ring (bearing contact) is pressed against a fixed block under adjustable weights while the test oil lubricates the contact zone. Good lubricants keep current stable, temperature low and the contact surface free of scoring; poor oils lock the machine within minutes. It is the most convincing way to demonstrate how an engine oil, gear oil or grease protects bearings in service."
+  tags = @("Bearing Wear Test", "Anti-Wear Demo", "Lever Loading", "220 V")
+  imgs = @("timken-tester-silver-top.jpg")
+  specs = [ordered]@{
+    "Model" = "Timken Bearing Wear Tester"
+    "Test Method" = "Timken OK Load Method (ASTM D2782)"
+    "Test Object" = "Bearing-type ring against fixed steel block"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Loading" = "Lever with graded weights"
+    "Observation" = "Current, noise, temperature, surface scoring"
+    "Structure" = "Compact bench-top cabinet with side drive motor"
+  }
+  apps = @(
+    @{ h = "Engine Oil Bearing Protection"; p = "Show how oil quality directly affects bearing life under load." },
+    @{ h = "Grease Screening for Motors"; p = "Compare greases for motor and pump bearing applications." },
+    @{ h = "Customer Education"; p = "Live side-by-side runs make anti-wear benefits visible." },
+    @{ h = "Tribology Teaching"; p = "Demonstrate boundary lubrication failure with a real bearing contact." }
+  )
+}
+
+$products += ,@{
+  slug = "block-on-ring-tester"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Block on Ring Friction and Wear Tester"
+  seoTitle = "Block on Ring Friction Wear Tester, ASTM D2509 | TOPECH"
+  metaDesc = "TOPECH block on ring tester runs a fixed block against a rotating ring under increasing load to ASTM D2509 / D2782, scoring lubricant film strength."
+  keywords = "block on ring tester,block on ring wear tester,ASTM D2509 tester,ASTM D2782 tester,ring and block tester,film strength tester"
+  sub = "ASTM D2509 / ASTM D2782 · Block-on-Ring Geometry · Stainless Steel"
+  desc = "The block on ring tester uses the classic line-contact geometry: a stationary steel block is loaded against a rotating ring immersed in the test lubricant. Load is increased stepwise through the lever-and-weight system until the lubricant film fails. The passed load (OK value) and the condition of the block surface quantify film strength and anti-wear performance per ASTM D2509 and ASTM D2782. Brushed stainless steel construction and a compact drive motor keep the machine stable, clean and easy to maintain."
+  tags = @("Block-on-Ring", "ASTM D2509", "Line Contact", "Stainless Steel")
+  imgs = @("timken-tester-silver-front.jpg")
+  specs = [ordered]@{
+    "Model" = "Block on Ring Friction and Wear Tester"
+    "Standards" = "ASTM D2509, ASTM D2782"
+    "Friction Geometry" = "Fixed block against rotating ring (line contact)"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Loading" = "Lever arm with calibrated step weights"
+    "Body" = "Brushed stainless steel housing"
+    "Test Kit" = "Standard test blocks and rings included"
+    "Observation" = "Scoring, lock-up and OK load rating"
+  }
+  apps = @(
+    @{ h = "Grease Load-Carrying Tests"; p = "ASTM D2509 OK load determination for lubricating greases." },
+    @{ h = "Lubricant Research"; p = "Controlled line-contact wear studies for formulation work." },
+    @{ h = "Batch Quality Control"; p = "Standardized scoring criteria for repeatable batch release." },
+    @{ h = "Film Strength Demos"; p = "Show film strength differences between oils at trade shows." }
+  )
+}
+
+$products += ,@{
+  slug = "portable-timken-tester"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Portable Timken Oil Test Machine with Case Kit"
+  seoTitle = "Portable Timken Oil Test Machine, Mobile Lubricity Tester Kit | TOPECH"
+  metaDesc = "Portable Timken oil test machine packed in a protective case with control box, motor and full accessory kit — take anti-wear demonstrations anywhere."
+  keywords = "portable Timken tester,portable oil test machine,mobile lubricant tester,oil tester kit,Timken tester with case,portable lubricity tester"
+  sub = "Complete Case Kit · Control Box + Motor · Field Demonstration Ready"
+  desc = "The portable Timken oil test machine brings the classic Timken OK load demonstration out of the lab. The kit ships in a protective transport case containing the control box with ammeter and power switch, the finned drive motor, loading hardware and all accessories needed for on-site anti-wear demonstrations. Set it up in minutes at customer premises, exhibitions or training venues, run the weight-loading test, and let the machine speak for your lubricant. Ideal for additive sales teams and lubricant distributors who travel."
+  tags = @("Portable Kit", "Transport Case", "Field Demo", "220 V")
+  imgs = @("timken-tester-portable-case.jpg")
+  specs = [ordered]@{
+    "Model" = "Portable Timken Oil Test Machine"
+    "Test Method" = "Timken OK Load Method (ASTM D2782)"
+    "Configuration" = "Separate control box + drive motor unit"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Indication" = "Analog ammeter + power switch on control panel"
+    "Loading" = "Lever with graded weights"
+    "Package" = "Protective transport case with foam inserts"
+    "Setup Time" = "Minutes — ready for on-site demonstrations"
+  }
+  apps = @(
+    @{ h = "On-Site Customer Demos"; p = "Run live anti-wear comparisons at the customer's workshop or office." },
+    @{ h = "Exhibition &amp; Roadshow"; p = "Lightweight case kit travels easily to trade shows and events." },
+    @{ h = "Distributor Training"; p = "Teach sales teams how to demonstrate lubricant quality in the field." },
+    @{ h = "Mobile Oil QC"; p = "Quick comparative checks of delivered oil batches at warehouses." }
+  )
+}
+
+$products += ,@{
+  slug = "lubricant-anti-wear-tester"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Lubricant Anti-Wear Performance Tester with Temperature Display"
+  seoTitle = "Lubricant Anti-Wear Performance Tester, Oil Temperature Display | TOPECH"
+  metaDesc = "Lubricant anti-wear performance tester with live oil temperature display and weight loading — compare anti-wear quality of oils by OK load and temperature."
+  keywords = "lubricant anti wear tester,anti wear performance tester,oil anti wear test machine,lubricant testing equipment,oil quality tester"
+  sub = "Oil Temperature Display · Weight Loading · Anti-Wear Comparison"
+  desc = "The lubricant anti-wear performance tester combines the Timken OK load test with live oil temperature monitoring. During loading, the digital temperature display tracks how the lubricant behaves under friction — anti-wear oils stay cooler while poor oils heat up fast. Together with the stacked weight loading system, this gives two independent proofs of lubricant quality in a single 3–5 minute run: OK load value and temperature rise. A compact green cabinet, silver control panel and precision lever make it suitable for showrooms, labs and training centers."
+  tags = @("Temperature Display", "Weight Loading", "Anti-Wear Comparison", "220 V")
+  imgs = @("timken-tester-green-detail.jpg")
+  specs = [ordered]@{
+    "Model" = "Lubricant Anti-Wear Performance Tester"
+    "Test Method" = "Timken OK Load Method (ASTM D2782)"
+    "Display" = "Digital oil temperature display (°C)"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Loading" = "Stacked step weights on loading lever"
+    "Test Duration" = "3–5 minutes per comparative run"
+    "Observation" = "OK load value + temperature rise"
+    "Housing" = "Green metal cabinet with silver control panel"
+  }
+  apps = @(
+    @{ h = "Oil Brand Comparison"; p = "Side-by-side OK load and temperature data make quality differences obvious." },
+    @{ h = "Showroom Demonstration"; p = "Compact and presentable — perfect for lubricant store counters." },
+    @{ h = "Anti-Wear Additive Proof"; p = "Quantify temperature reduction and OK load gain after dosing." },
+    @{ h = "Quality Screening"; p = "Fast go / no-go check of incoming lubricant batches." }
+  )
+}
+
+$products += ,@{
+  slug = "timken-extreme-pressure-tester"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Timken Extreme Pressure and Anti-Wear Tester"
+  seoTitle = "Timken Extreme Pressure Tester, EP Anti-Wear Test Machine | TOPECH"
+  metaDesc = "Timken extreme pressure tester loads the friction pair with stacked weights to evaluate EP and anti-wear performance of oils and greases to ASTM D2782."
+  keywords = "extreme pressure tester,EP tester,extreme pressure anti wear tester,Timken EP test machine,load carrying tester,gear oil EP tester"
+  sub = "Extreme Pressure Loading · Stacked Weights · ASTM D2782"
+  desc = "The Timken extreme pressure tester pushes lubricants to their limits. Stacked weights on the loading lever apply progressively heavier loads to the block-on-ring friction pair until the oil film breaks — revealing the true extreme pressure (EP) reserve of gear oils, engine oils and greases. Oils with genuine EP additives carry dramatically higher loads than ordinary oils, and the difference is impossible to fake. Built with a rugged black-finish cabinet, precision lever mechanism and reliable drive motor for years of heavy-duty demonstration and QC use."
+  tags = @("Extreme Pressure", "Stacked Weights", "ASTM D2782", "Heavy-Duty")
+  imgs = @("timken-tester-black-weights.jpg")
+  specs = [ordered]@{
+    "Model" = "Timken Extreme Pressure and Anti-Wear Tester"
+    "Test Method" = "Timken OK Load Method (ASTM D2782)"
+    "Loading" = "Stacked step weights on precision lever"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Friction Type" = "Block-on-Ring (ring rotates against fixed block)"
+    "Result" = "Maximum passed load — EP reserve of the lubricant"
+    "Housing" = "Rugged black metal cabinet"
+    "Suitable Oils" = "Gear oils, engine oils, greases, hydraulic oils"
+  }
+  apps = @(
+    @{ h = "Gear Oil EP Rating"; p = "Demonstrate the extreme pressure reserve of gear oils under heavy loads." },
+    @{ h = "Grease Load Testing"; p = "Rank greases by maximum passed load for demanding applications." },
+    @{ h = "Additive Sales Proof"; p = "EP additive effect shown live with stacked weight loading." },
+    @{ h = "Heavy-Duty QC"; p = "Robust construction suits frequent industrial quality checks." }
+  )
+}
+
+$products += ,@{
+  slug = "oil-wear-test-machine"; cat = "friction"; catLabel = "Anti-Wear Testers"
+  name = "Oil Friction Wear Testing Machine"
+  seoTitle = "Oil Friction Wear Testing Machine, Anti-Wear Tester | TOPECH"
+  metaDesc = "Oil friction wear testing machine for lubricant anti-wear demonstration and QC — Timken OK load method, weight loading, works with oils and greases."
+  keywords = "oil wear test machine,friction wear testing machine,oil friction wear tester,wear testing machine,lubricant wear tester,anti wear testing equipment"
+  sub = "Friction &amp; Wear Testing · Timken OK Load · Oils and Greases"
+  desc = "The oil friction wear testing machine is a general-purpose anti-wear test platform for lubricating oils and greases. Based on the Timken OK load method, it loads a rotating ring against a fixed block with graded weights to reveal friction, wear and film-failure behavior of the test lubricant. Results are immediate and visual — current, noise and lock-up tell you whether the oil protects. The green industrial cabinet, adjustable loading lever and torque indicator make it easy to operate for technicians and sales staff alike."
+  tags = @("Friction Wear Test", "Timken OK Load", "Oils &amp; Greases", "220 V")
+  imgs = @("timken-tester-green-angle.jpg")
+  videos = @( @{ src = "timken-bearing-water-resistance-test-full.mp4"; poster = "timken-tester-green-angle.jpg"; note = "Timken Bearing Water Resistance Test — bearing exposed to water while running, proving protection in harsh environments." } )
+  specs = [ordered]@{
+    "Model" = "Oil Friction Wear Testing Machine"
+    "Test Method" = "Timken OK Load Method (ASTM D2782)"
+    "Power Supply" = "AC 220 V, 50 Hz"
+    "Loading" = "Adjustable lever with graded weights"
+    "Friction Type" = "Block-on-Ring (ring rotates against fixed block)"
+    "Indication" = "Torque / load indicator on control panel"
+    "Suitable Samples" = "Engine oils, gear oils, hydraulic oils, greases"
+    "Housing" = "Green industrial metal cabinet"
+  }
+  apps = @(
+    @{ h = "General Anti-Wear QC"; p = "Routine wear-protection checks of lubricants before use or sale." },
+    @{ h = "Lubricant Comparison"; p = "Rank competing oils by lock-up behavior and OK load value." },
+    @{ h = "Sales Demonstration"; p = "Simple operation lets any salesperson run a convincing test." },
+    @{ h = "Education &amp; Training"; p = "Teach friction, wear and lubrication fundamentals hands-on." }
+  )
+}
+
+$products += ,@{
   slug = "flash-point-tester"; cat = "analysis"; catLabel = "Analysis Instruments"
   name = "Fully Automatic Open / Closed Cup Flash Point Tester"
   seoTitle = "Fully Automatic Open Cup / Closed Cup Flash Point Test Apparatus | TOPECH"
@@ -475,248 +701,6 @@ $products += ,@{
     @{ h = "Power Plant Oil Monitoring"; p = "Detect light-end contamination in transformer and turbine oils through flash point drop." },
     @{ h = "Transport &amp; Storage Safety"; p = "Classify flammability of chemicals for safe handling, transport and storage regulations." },
     @{ h = "Research &amp; Formulation"; p = "Evaluate batch consistency and formulation changes with precise, repeatable flash point data." }
-  )
-}
-
-$products += ,@{
-  slug = "kinematic-viscosity-tester-lyv8"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "LYV-8 Digital Kinematic Viscosity Tester"
-  seoTitle = "LYV-8 Digital Kinematic Viscosity Tester, ASTM D445 | TOPECH"
-  metaDesc = "LYV-8 kinematic viscosity tester to ASTM D445 with precise digital temperature control, 4 viscometer positions and uniform homeothermic water bath."
-  keywords = "ASTM D445,Digital Kinematic Viscosity Tester,IP71,viscosity meter,viscosity test plant"
-  sub = "GB 265 / ASTM D445 / IP 71 · ±0.1 °C · 4 Viscometers Simultaneously"
-  desc = "The LYV-8 kinematic viscosity tester is applicable to GB 265-88, GB 1814, ASTM D445, IP 71 and other determining methods. A precise imported digital temperature controller keeps the ten-liter homeothermic water bath uniform, while a highlighted digital stopwatch times flow with ±0.1 s accuracy. Four viscometer installing holes allow testing four oil samples simultaneously; the instrument can also serve as a high-viscosity homeothermic water bath for other tests."
-  tags = @("ASTM D445", "±0.1 °C", "±0.1 s", "4 Positions", "10 L Bath")
-  imgs = @("kinematic-viscosity-tester-lyv8.jpg")
-  specs = [ordered]@{
-    "Standards" = "GB 265-88, GB 1814, ASTM D445, IP 71"
-    "Capillary Viscometer" = "Per SH/T 0173-92 and JJG 155 regulations"
-    "Display" = "Precise digital temperature controller + highlighted digital stopwatch"
-    "Temperature Control Range" = "Room temperature to 150 °C, arbitrary setting"
-    "Testing Range" = "Kinematic viscosity 0.5–20000 mm²/s; dynamic 0.3–40000 mPa·s"
-    "Temperature Accuracy" = "±0.1 °C"
-    "Timing Accuracy / Range" = "±0.1 s; 0.1 s – 999.9 s"
-    "Homoeothermic Bath" = "300 × 300 mm double layer, 10 L"
-    "Stirring Speed" = "1520 rounds/min"
-    "Max Power" = "1800 W"
-    "Sample Positions" = "4 pieces simultaneously"
-    "Power Supply" = "AC 220 V ±10%, 50 Hz ±1 Hz"
-    "Dimensions" = "220 × 190 × 500 mm (L × W × H)"
-    "Weight" = "12 kg"
-  }
-  apps = @(
-    @{ h = "Lubricant QC Labs"; p = "Routine kinematic viscosity measurement of engine oils, gear oils and hydraulic fluids at 40 °C / 100 °C." },
-    @{ h = "Refinery Blending Control"; p = "Verify blend batches against viscosity grade specifications before release." },
-    @{ h = "Used Oil Analysis"; p = "Track viscosity change in service to judge oxidation, dilution and oil drain intervals." },
-    @{ h = "Teaching &amp; Calibration"; p = "Four parallel positions and clear digital readout suit training labs and method comparison." }
-  )
-}
-
-$products += ,@{
-  slug = "kinematic-viscosity-tester-ly445"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "LY-445 ASTM Kinematic Viscosity Tester"
-  seoTitle = "LY-445 ASTM Kinematic Viscosity Tester, Automatic | TOPECH"
-  metaDesc = "LY-445 automatic kinematic viscosity tester with SCM control, color LCD, auto timing, calculation and printing — high and low viscosity oils supported."
-  keywords = "ASTM D445,kinematic viscosity apparatus,viscosity meter,viscosity tester"
-  sub = "SCM Control · Color LCD · Auto Timing, Calculation &amp; Printing"
-  desc = "The LY-445 viscosity tester works under GB 265-88, GB 1814, ASTM D445, IP 71 and other standards. Advanced SCM control with a large color LCD screen guides operation with menu tips in English. Unique modular technology tests both high-viscosity and low-viscosity oils, while four viscometer positions run samples simultaneously. The instrument automatically calculates kinematic viscosity values and averages, then prints and stores the results."
-  tags = @("ASTM D445", "Auto Calculation", "Color LCD", "High &amp; Low Viscosity")
-  imgs = @("kinematic-viscosity-tester-ly445.jpg")
-  specs = [ordered]@{
-    "Standards" = "GB 265-88, GB 1814, ASTM D445, IP 71"
-    "Control" = "Advanced SCM, intelligent temperature control"
-    "Display" = "Large color LCD with English operation menu"
-    "Viscosity Coverage" = "High-viscosity and low-viscosity oils (modular technology)"
-    "Sample Positions" = "4 viscometers simultaneously"
-    "Bath" = "10 L homeothermic bathtub with organic glass stay-warm case"
-    "Heater" = "Stainless steel, anti-corrosion; ring-type daylight lamp for observation"
-    "Viscometer Clamp" = "Three-point vertical type, reliable grasp"
-    "Automation" = "Auto timing, calculation, average, printing and storage"
-    "Status Indication" = "Regular display of temperature, time and parameters"
-  }
-  apps = @(
-    @{ h = "Full-Range Viscosity Testing"; p = "One instrument covers light fuels to heavy gear oils thanks to modular high / low viscosity design." },
-    @{ h = "Report-Ready QC"; p = "Automatic calculation, printing and memory deliver traceable viscosity records for audits." },
-    @{ h = "Batch Consistency Checks"; p = "Four simultaneous positions speed up comparison of production batches." },
-    @{ h = "Lubricant Labs &amp; Institutes"; p = "Standard-compliant results for certification bodies and third-party inspection." }
-  )
-}
-
-$products += ,@{
-  slug = "pour-point-tester"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "Petroleum Pour Point &amp; Cloud Point Tester"
-  seoTitle = "Petroleum Pour Point Tester, Pour Point Apparatus ASTM | TOPECH"
-  metaDesc = "Petroleum pour point and cloud point tester to GB/T 510 and GB/T 3535 with cascade refrigeration, metal bath cooling and double-aperture design."
-  keywords = "Petroleum pour point tester,pour point apparatus,pour point astm,cloud point tester"
-  sub = "GB/T 510 · GB/T 3535 · Cascade Refrigeration · No Alcohol Needed"
-  desc = "Pour point is the lowest temperature at which an inclined oil sample starts to move; cloud point is the highest temperature at which cooled oil stops moving — both measure low-temperature fluidity. This determinator follows GB/T 510 and GB/T 3535 and is mainly used for transformer oil, lubricating oil and similar products. Embedded temperature control with LCD display, cascade refrigeration and metal-bath cooling deliver fast, stable cooling without alcohol or other cooling media. The double-aperture design tests pour point, condensation point, cloud point and cold filtration point without mutual interference."
-  tags = @("GB/T 510", "GB/T 3535", "Cascade Cooling", "Double Aperture", "±0.1 °C")
-  imgs = @("pour-point-tester.jpg")
-  specs = [ordered]@{
-    "Standards" = "GB/T 510, GB/T 3535"
-    "Control" = "Embedded system temperature control, LCD display"
-    "Refrigeration" = "Cascade refrigeration, fast cooling speed"
-    "Cooling Method" = "Metal bath cooling — no alcohol or cooling medium needed"
-    "Temperature Precision" = "±0.1 °C"
-    "Cooling Time" = "≤ 20 min"
-    "Cold Bath Size" = "200 × 90 × 90 mm"
-    "Tilting" = "45° bath tilt support with timing display"
-    "Apertures" = "Double aperture — pour, cloud, condensation &amp; cold filtration points"
-    "Input Power" = "&lt; 1800 W"
-    "Power Supply" = "AC 220 V ±10%, 50 Hz"
-  }
-  apps = @(
-    @{ h = "Winter-Grade Oil Development"; p = "Qualify low-temperature fluidity of engine and gear oils for cold-climate grades." },
-    @{ h = "Transformer Oil Acceptance"; p = "Confirm pour point of insulating oils for substation use in cold regions." },
-    @{ h = "Fuel Cold Flow Testing"; p = "Cloud point and cold filtration assessment of diesel and similar fuels." },
-    @{ h = "Storage &amp; Transport Planning"; p = "Ensure oils remain pumpable through pipelines and tanks in winter." }
-  )
-}
-
-$products += ,@{
-  slug = "oil-acidity-analyzer"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "Fully Automatic Oil Acidity Analyzer"
-  seoTitle = "Fully Automatic Oil Acidity Analyzer / Acid Value Tester | TOPECH"
-  metaDesc = "Automatic acid value tester to ASTM D974 for transformer oil, turbine oil and motor oil — 6 sample cups, color LCD, 0.0001 mgKOH/g resolution."
-  keywords = "acid value tester,oil acidity analyzer,acid number test plant,ASTM D974,Turbine Oil"
-  sub = "ASTM D974 · GB/T 264 · 6 Sample Cups · 0.0001 mgKOH/g Resolution"
-  desc = "This acidity analyzer applies the acid-base titration principle under micro-computer control with color LCD display and English input menu, conforming to ASTM D974, GB/T 264, GB 7599-87 and GB/T 7304-2000. It accurately tests the acid value of transformer oil, steam-turbine oil, fire-resistant oil, diesel and gasoline oils, and is widely used in chemical industry, power and petroleum fields. Automatic liquid adding, titration, stirring, end-point judgment, pipe cleaning and result printing make the whole process hands-free."
-  tags = @("ASTM D974", "6 Cups Parallel", "Auto Titration", "260 Data Groups")
-  imgs = @("oil-acidity-analyzer.jpg")
-  specs = [ordered]@{
-    "Standards" = "ASTM D974, GB/T 264, GB 7599-87, GB/T 7304-2000"
-    "Display" = "7-inch color LCD, English menu"
-    "Testing Range" = "0.0005–0.5000 mgKOH/g"
-    "Resolution" = "0.0001 mgKOH/g"
-    "Accuracy" = "0.001–0.100 mgKOH/g: deviation 0.0005 mgKOH/g; 0.1–0.5 mgKOH/g: 5% of indication"
-    "Repeatability" = "0.004 mgKOH/g"
-    "Sample Cups" = "6 cups with automatic change-over for parallel comparison"
-    "Automation" = "Liquid adding, titration, stirring, end-point judgment, cleaning, printing"
-    "Data Storage" = "260 groups"
-    "Printing" = "High-speed thermal dot printing"
-    "Power Supply" = "220 V ±10%, 50 Hz ±5%; humidity ≤ 85%"
-    "Dimensions / Weight" = "440 × 300 × 220 mm / 16 kg"
-  }
-  apps = @(
-    @{ h = "Power Plant Oil Monitoring"; p = "Track acid value of transformer and turbine oil to schedule reconditioning before corrosion starts." },
-    @{ h = "Refinery Product Release"; p = "Verify acidity of finished fuels and lubricants meets specification limits." },
-    @{ h = "Used Oil Condition Assessment"; p = "Rising acid number signals oxidation and additive depletion in service oils." },
-    @{ h = "Third-Party Testing Labs"; p = "Six parallel cups and automatic records suit high-throughput certified laboratories." }
-  )
-}
-
-$products += ,@{
-  slug = "karl-fischer-water-content-tester"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "LY-2100 Fully Automatic Karl Fischer Water Content Tester"
-  seoTitle = "LY-2100 Fully Automatic Karl Fischer Water Content Tester | TOPECH"
-  metaDesc = "Karl Fischer coulometric moisture tester with 1 ppm to 100% range, 7-inch touch LCD, closed titration system and result display within 60 seconds."
-  keywords = "Insulation Oil,moisture meter,moisture tester,Transformer Oil,Turbine Oil,Karl Fischer"
-  sub = "Coulometric Method · 1 ppm – 100% · Result in 60 s · 7-Inch Touch LCD"
-  desc = "The LY-2100 adopts the globally recognized Karl Fischer coulometric method — the most accurate moisture testing method at low cost. It quickly analyzes water content in liquids, solids and gases from 0.0001% (1 ppm) to 100%, with auto-stirring and analysis completed within 60 seconds. The fully closed titration system protects operators from reagent, and one 500 ml Karl Fischer reagent bottle supports about 1000 consecutive tests. Widely used across petroleum, chemical, power, pharmaceutical, pesticide and research institutions."
-  tags = @("Karl Fischer", "1 ppm Sensitivity", "60 s Analysis", "Closed System")
-  imgs = @("karl-fischer-water-content-tester.png")
-  specs = [ordered]@{
-    "Testing Method" = "MPU-controlled electrolysis — Karl Fischer Coulometric Method"
-    "Display" = "7-inch color touch LCD, English"
-    "Water Content Range" = "0.0001% (1 ppm) – 100%"
-    "Testing Range" = "0.01 µg H₂O – 200 mg H₂O"
-    "Sensitivity" = "0.01 µg H₂O"
-    "Electrolysis Rate" = "2.4 mg H₂O/min; current auto-controlled within 430 mA"
-    "Accuracy" = "2–100 µg: ≤ ±1 µg; 100–1000 µg: ≤ ±2.9 µg; &gt; 1000 µg: ≤ ±0.2%"
-    "Analysis Time" = "Auto stirring + analysis within 60 s"
-    "Reagent" = "500 ml Karl Fischer reagent ≈ 1000 tests"
-    "Printing" = "Thermal printer — µg / ppm / mg/L / sample no. / date"
-    "Interface" = "USB / RS232 for laptop or PC network management"
-    "Power / Consumption" = "AC 220 V ±10%, 50 Hz; &lt; 40 W"
-    "Dimensions / Weight" = "390 × 270 × 190 mm / ≈ 7 kg"
-  }
-  apps = @(
-    @{ h = "Transformer Oil Moisture"; p = "Keep insulation oil dry — ppm-level water content directly affects dielectric strength." },
-    @{ h = "Chemical &amp; Pharmaceutical QC"; p = "Moisture determination of alcohols, esters, solvents, medicine materials and electrolytes." },
-    @{ h = "Gas Moisture Analysis"; p = "Natural gas, liquefied gas, Freon and butadiene water content measurement." },
-    @{ h = "Food &amp; Industrial Solids"; p = "Mineral salts, citric acid, paraffin and other soluble solids moisture testing." }
-  )
-}
-
-$products += ,@{
-  slug = "petroleum-density-tester"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "LY-018A Petroleum Products Density Tester"
-  seoTitle = "LY-018A Petroleum Products Density Tester, GB/T 1884 | TOPECH"
-  metaDesc = "Petroleum products density tester to GB/T 1884-2000 densimeter method with explosion-proof glass bath, intelligent LCD temperature control and 2 test holes."
-  keywords = "crude oil density test,density test of oil,oil density test method,oil density tester,Petroleum Products Density Tester"
-  sub = "GB/T 1884-2000 · Densimeter Method · LCD Temperature Control · 2 Holes"
-  desc = "The LY-018A density tester is designed and made per national standard GB/T 1884-2000 (Test Methods for Density of Petroleum and Liquid Petroleum Products, Densimeter Method). The constant-temperature bath uses rigid insulation explosion-proof glass for easy observation, with convenient measuring-cylinder and thermometer brackets. An intelligent temperature controller with LCD provides rapid, stable temperature control from room temperature to 100 °C."
-  tags = @("GB/T 1884", "±0.1 °C", "Explosion-Proof Glass Bath", "2 Holes")
-  imgs = @("petroleum-density-tester.jpg")
-  specs = [ordered]@{
-    "Standard" = "GB/T 1884-2000 (Densimeter method)"
-    "Heating Power" = "1800 W"
-    "Temperature Range" = "Room temperature to 100 °C"
-    "Temperature Precision" = "±0.1 °C"
-    "Test Holes" = "2 holes"
-    "Bath" = "Rigid insulation explosion-proof glass bowl"
-    "Power Supply" = "AC 220 V ±10%, 50 Hz"
-    "Environment" = "5–40 °C, relative humidity ≤ 85%"
-    "Dimensions" = "560 × 380 × 580 mm (L × W × H)"
-  }
-  apps = @(
-    @{ h = "Crude &amp; Refined Oil Density"; p = "Routine density determination of liquid petroleum products for trade and QC." },
-    @{ h = "API Gravity Conversion"; p = "Accurate density at reference temperature supports volume-to-mass oil accounting." },
-    @{ h = "Blend Verification"; p = "Detect off-spec blending through density deviation." },
-    @{ h = "Lab Teaching"; p = "Clear glass bath and simple densimeter method suit training laboratories." }
-  )
-}
-
-$products += ,@{
-  slug = "oil-color-chroma-tester"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "LY-225 Petroleum Products Oil Color Chroma Tester"
-  seoTitle = "LY-225 Petroleum Products Oil Color Chroma Tester, ASTM D1500 | TOPECH"
-  metaDesc = "Oil color chroma tester to ASTM D1500 / SH/T 0168 with standard color wheel, 2750 K light source and eyepiece comparison for lubricants and fuels."
-  keywords = "ASTM D1500,oil Chroma analyzer,oil color tester,test instrument"
-  sub = "ASTM D1500 · SH/T 0168 · Standard Color Wheel · 2750 K Light Source"
-  desc = "The LY-225 chroma tester is manufactured under ASTM D1500 and SH/T 0168 for determining the color of lubricants, kerosene, diesel and other petroleum products, corresponding to GB/T 6540 color numbers. Light from a 220 V / 100 W frosted bulb (2750 ± 50 K) passes milky and sunlight-filter glass to simulate north light, then forms two identical parallel beams through standard color glass and the sample tube. The operator compares sample color (left half of eyepiece) with the 25-grade standard color wheel (right half)."
-  tags = @("ASTM D1500", "SH/T 0168", "25-Grade Color Wheel", "North Light Simulation")
-  imgs = @("oil-color-chroma-tester.png", "oil-color-wheel.png")
-  specs = [ordered]@{
-    "Standards" = "ASTM D1500, SH/T 0168 (corresponds to GB/T 6540)"
-    "Color Wheel" = "26 × Φ14 holes: 25 graded color glasses + 1 blank"
-    "Light Source" = "Inside frosted bulb 220 V / 100 W, 2750 ± 50 K"
-    "Optical System" = "Milky glass + sunlight filter to simulate north light"
-    "Beams" = "Two parallel beams — sample and standard, identical size and shape"
-    "Eyepiece" = "Optical lens with focus and light adjustment; sample left / standard right"
-    "Colorimetric Tube" = "Flat glass tube, ID Φ32 mm, height 120–130 mm, colorless"
-  }
-  apps = @(
-    @{ h = "Base Oil Grading"; p = "Color is a fast indicator of refining depth and base oil quality." },
-    @{ h = "Fuel Appearance QC"; p = "Check kerosene and diesel color against specification limits." },
-    @{ h = "Aging &amp; Contamination Clues"; p = "Darkening lubricant color hints at oxidation or contamination in service." },
-    @{ h = "Batch Consistency"; p = "Compare production batch color to reference standards before shipment." }
-  )
-}
-
-$products += ,@{
-  slug = "copper-strip-corrosion-tester"; cat = "analysis"; catLabel = "Analysis Instruments"
-  name = "ASTM D130 Copper Strip Corrosion Test Machine"
-  seoTitle = "ASTM D130 Copper Strip Corrosion Test Machine | TOPECH"
-  metaDesc = "Copper strip corrosion tester to ASTM D130 / GB/T 5096 for aviation gasoline, jet fuel, kerosene, diesel and lubricants corrosion assessment."
-  keywords = "ASTM D130,Copper corrosion tester,copper strip corrosion test equipment,copper corrosion analyzer"
-  sub = "ASTM D130 · GB/T 5096 · Fuels &amp; Lubricants Corrosion Assessment"
-  desc = "This copper strip corrosion test machine complies with GB/T 5096 and ASTM D130, applicable to assessing the corrosion degree of aviation gasoline, jet fuel, motor gasoline, kerosene, diesel, natural gasoline, lubricants and other petroleum products on copper. Polished copper strips are immersed in the sample under controlled temperature, then compared against the ASTM copper strip corrosion classification standards to rate corrosiveness."
-  tags = @("ASTM D130", "GB/T 5096", "Fuels &amp; Lubricants", "Standard Rating")
-  imgs = @("copper-strip-corrosion-tester.png")
-  specs = [ordered]@{
-    "Standards" = "ASTM D130, GB/T 5096"
-    "Applicable Samples" = "Aviation gasoline, jet fuel, motor gasoline, kerosene, diesel, natural gasoline, lubricants"
-    "Test Principle" = "Polished copper strip immersion at controlled temperature, then color comparison"
-    "Rating" = "ASTM copper strip corrosion classification (1a – 4c)"
-    "Temperature Control" = "Intelligent control for water bath / test bomb conditions"
-    "Application" = "Corrosiveness quality control of petroleum products"
-  }
-  apps = @(
-    @{ h = "Jet Fuel Certification"; p = "Copper corrosion rating is mandatory for aviation turbine fuel specification release." },
-    @{ h = "Gasoline &amp; Diesel QC"; p = "Detect corrosive sulfur compounds that attack fuel system components." },
-    @{ h = "Lubricant Specification"; p = "Verify corrosion protection of oils against copper alloys." },
-    @{ h = "Refinery Process Monitoring"; p = "Track corrosiveness through treating units such as sweetening and hydrotreating." }
   )
 }
 
