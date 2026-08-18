@@ -94,25 +94,30 @@ src="https://www.facebook.com/tr?id=1821520142169884&ev=PageView&noscript=1"
 
     <div class="form-card">
       <h2 style="color:var(--primary);font-size:22px;margin-bottom:18px;">Send an Inquiry</h2>
-      <form id="inquiry-form">
+      <form id="inquiry-form" action="https://formsubmit.co/sales@topechltd.com" method="POST">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_subject" value="New Inquiry from TOPECH Website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <div class="form-group">
             <label for="f-name">Your Name *</label>
-            <input type="text" id="f-name" required placeholder="John Smith">
+            <input type="text" id="f-name" name="name" required placeholder="John Smith">
           </div>
           <div class="form-group">
             <label for="f-email">Email *</label>
-            <input type="email" id="f-email" required placeholder="you@company.com">
+            <input type="email" id="f-email" name="email" required placeholder="you@company.com">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="f-company">Company</label>
-            <input type="text" id="f-company" placeholder="Company / Lab name">
+            <input type="text" id="f-company" name="company" placeholder="Company / Lab name">
           </div>
           <div class="form-group">
             <label for="f-product">Product of Interest</label>
-            <select id="f-product">
+            <select id="f-product" name="product">
               <option value="">— Select —</option>
               <option>Timken Oil Friction Tester</option>
               <option>Digital Anti-Wear Tester (Timken)</option>
@@ -139,9 +144,10 @@ src="https://www.facebook.com/tr?id=1821520142169884&ev=PageView&noscript=1"
         </div>
         <div class="form-group">
           <label for="f-message">Message *</label>
-          <textarea id="f-message" rows="6" required placeholder="Quantity, standards, destination, questions..."></textarea>
+          <textarea id="f-message" name="message" rows="6" required placeholder="Quantity, standards, destination, questions..."></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;">Submit Inquiry</button>
+        <p id="form-status" style="display:none;margin-top:14px;padding:12px;border-radius:6px;font-size:14px;text-align:center;"></p>
       </form>
     </div>
 
