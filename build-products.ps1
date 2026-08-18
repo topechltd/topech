@@ -171,7 +171,7 @@ $faqList
     $vidCount = 0
     foreach ($v in $d.videos) {
       if ($vidCount -gt 0) { $vidList += ",`r`n" }
-      $vidList += "    { `"@type`": `"VideoObject`", `"name`": `"$(JsonEsc $v.note)`", `"description`": `"$(JsonEsc $v.note)`", `"thumbnailUrl`": `"$siteBase/images/products/$($v.poster)`", `"contentUrl`": `"$siteBase/videos/$($v.src)`", `"uploadDate`": `"2026-08-17`" }"
+      $vidList += "    { `"@type`": `"VideoObject`", `"name`": `"$(JsonEsc $v.note)`", `"description`": `"$(JsonEsc $v.note)`", `"thumbnailUrl`": `"$siteBase/images/products/$($v.poster)`", `"contentUrl`": `"$siteBase/videos/$($v.src)`", `"uploadDate`": `"2026-08-17T10:00:00+08:00`" }"
       $vidCount++
     }
     $ldVideo = @"
